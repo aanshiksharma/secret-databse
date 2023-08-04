@@ -1,20 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 main{
     background: var(--color-1);
     color: var(--color-2);
-    padding: 20px;
+    padding: 40px;
+    height: 100vh;
+    font-size: 16px;
 }
 
 .login {
-    height: calc(100% -40px);
-    border: 2px solid var(--color-2);
+    height: 100%;
+    border: 6px double var(--color-2);
+    display: grid;
+    place-items: center;
+    position: relative;
 }
 
 .login form{
     border: 2px solid var(--color-2);
     padding: 20px;
+}
+
+input[type='password'] {
+    padding: 4px;
+    font-size: 12px;
+    background: var(--input-background-color);
+    background: var(--color-1);
+    color: var(--color-2);
+    border: 2px solid var(--color-2);
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+input[type='password']:focus {
+    border: 2px solid var(--color-2);
+    outline: none;
+}
+
+
+.wrong-password-text {
+    color: var(--color-3);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 15%;
 }

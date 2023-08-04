@@ -1,11 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500;700&display=swap');
+
+* {
+    font-family: 'Tektur', cursive;
 }
 
-:root{
+:root {
     /* Main Color Scheme is Black and Green */
-    --color-1: black;
+    --color-1: rgb(0, 0, 0);
     --color-2: rgb(18, 198, 18);
+    --color-3: rgb(255, 0, 0);
+}
+
+.btn {
+    background: var(--color-2);
+    color: var(--color-1);
+    border: 1px solid var(--color-2);
 }
