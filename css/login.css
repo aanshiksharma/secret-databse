@@ -1,0 +1,20 @@
+
+main{
+    background: var(--color-1);
+    color: var(--color-2);
+    padding: 20px;
+}
+
+.login {
+    height: calc(100% -40px);
+    border: 2px solid var(--color-2);
+}
+
+.login form{
+    border: 2px solid var(--color-2);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

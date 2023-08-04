@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Main Color Scheme is Black and Green */
+    --color-1: black;
+    --color-2: rgb(18, 198, 18);
+}
