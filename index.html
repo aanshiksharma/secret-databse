@@ -12,16 +12,19 @@
 <body>
     <main>
         <div class="login">
-            <form>
+            <div>
                 <label for="password">Enter Password:</label>
-                <input type="password" name="login-password" id="password" autofocus>
-            </form>
+                <div class="password-bar">
+                    <input type="password" name="login-password" id="password" autofocus>
+                    <button type="submit" class="btn" id="button">&rarr;</button>
+                </div>
+            </div>
             <p id="wrongPassword" class="wrong-password-text">
                 Your have 3 tries left.
             </p>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
