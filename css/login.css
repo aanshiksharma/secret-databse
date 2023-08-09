@@ -20,24 +20,39 @@ main{
     position: relative;
 }
 
-.login form{
+.login > div{
     border: 2px solid var(--color-2);
     padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
-input[type='password'] {
-    padding: 4px;
-    font-size: 12px;
-    background: var(--input-background-color);
-    background: var(--color-1);
-    color: var(--color-2);
+.password-bar {
+    display: flex;
+    align-items: center;
     border: 2px solid var(--color-2);
     border-radius: 2px;
+    padding: 4px;
     margin-left: 10px;
 }
 
-input[type='password']:focus {
-    border: 2px solid var(--color-2);
+.password-bar .btn {
+    background: var(--color-1);
+    border: none;
+    color: var(--color-2);
+}
+
+input[type='password'],
+input[type='disabled'] {
+    font-size: 12px;
+    background: var(--color-1);
+    border: none;
+    color: var(--color-2);
+}
+
+input[type='password']:focus,
+input[type='disabled']:focus {
+    border: none;
     outline: none;
 }
 

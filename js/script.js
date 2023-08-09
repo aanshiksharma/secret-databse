@@ -1,30 +1,30 @@
 
-// let password = 'EN2JGER5';
-let password = '12345678';
+const password = 'EN2JGER5';
+// const password = '12345678';
+const wrongPassword = document.getElementById('wrongPassword');
+const form = document.querySelector('.login>div');
+let submitButton = document.getElementById('button');
 let tries = 3;
-let wrong = document.getElementById('wrongPassword');
-let passwordField = document.getElementById('password');
 
-
-
-passwordField.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        let pass = document.getElementById('password').value;
-        if (pass === password) {
-            // form.action = 'home.html';
-            window.location.replace('home.html');
-        } else {
-            tries--;
-            wrong.innerHTML = 'The password is incorrect. You have' + tries + 'tries left.';
+submitButton.addEventListener('click', (e) => {
+    let inputPassword = document.getElementById('password').value;
+    if (inputPassword == password) {
+        window.location.pathname = '/home.html';
+    } else {
+        tries--;
+        let checktrial = checktrials(tries);
+        if (checktrial !== false) {
+            wrongPassword.innerHTML = 'INCORRECT PASSWORD! You have ' + tries + ' tries left.';
         }
     }
+    e.preventDefault();
 });
 
-
-
-
-
-
-
-
-
+function checktrials(tries) {
+    if (tries <= 0) {
+        wrongPassword.innerHTML = 'You have succeeded your trial limit. Reload the page to retry.';
+        document.getElementById('password').type = 'disabled';
+        document.getElementById('password').value = ' ';
+        return false;
+    }
+}
